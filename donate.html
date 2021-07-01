@@ -1,0 +1,209 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<!-- Nosey little bean aren't you. xP If you want to use this as a template, just credit thestuffwebuild.com like this.-->
+		<style>
+			/****************** BACKGROUND BIT ******************/
+			body, html {
+				height: 100%;
+				margin: 0;
+				font: 1em arial, sans-serif;
+				color: #111;
+			}
+			.bgimg-1, .bgimg-2, .bgimg-3 {
+				position: relative;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.bgimg-1 {
+				background-image: url("https://raw.githubusercontent.com/Physics-Dude/TFS/main/vethlap.gif"); 
+				height: 100%;
+			}
+			
+			/****************** MAIN WORDS BIT ******************/
+			.caption {
+				position: absolute;
+				left: 0;
+				top: 5%;
+				text-align: center;
+				color: #fff;
+			}
+			.caption span.border {
+				text-shadow: 2px 2px 5px black;
+				color: #fff;
+				padding: 1vh;
+				font-size: 3vh;
+				line-height: 1.6;
+				letter-spacing: 1.3vh;
+			}
+			span.border1 {
+				text-shadow: 2px 2px 5px black;
+				color: #fff;
+				padding: 1vh;
+				font-size: 3vh;
+			}
+			.monie {
+			
+				background-color: rgba(122, 255, 122, 1);
+				display: inline-table;
+				padding:1em;
+			}
+			.blurb {
+			
+				color:000;
+			}
+			input.c {
+				width:100%;
+			}
+			
+			/****************** FOOTER BIT ******************/
+			.foot {
+				position: absolute;
+				left: 0;
+				bottom: 1vh;
+				text-align: center;
+				color: #fff;
+			}
+			.foot span.border {
+				color: #aaa;
+				padding-left: 1vh;
+				font-size: 1.5vh;
+				line-height: 1;
+			}
+			
+			/****************** SPINNY BIT ******************/
+			.loading {
+				position: inline;
+				margin-top: 2vh;
+				text-align: center;
+				color: #111;
+				padding:0 48vw 0 48vw;
+			}
+			.rotat {
+				-webkit-animation:spin 10s linear infinite;
+				-moz-animation:spin 10s linear infinite;
+				animation:spin 10s linear infinite; 
+				transform-origin: center center
+			}
+			.rotat span.spon {
+				padding: 0.5vh;
+				font: 2vh monospace, sans-serif;
+				background-color: rgba(255, 250, 0, 1);
+				border: 0.3vh solid #000;
+				border-radius: 0.5vh;
+				line-height: 1;
+			}
+			@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+			@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+			@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+			
+			/****************** BLEEP BLOOPS ******************/
+			audio { 
+				display:none;
+			}
+		</style>
+	</head>
+	<body onload="myFunction()">
+		<div class="bgimg-1">
+			<div class="caption">
+				<span class="border1">Would you like to support:</span><br/> 
+				<span class="border">Tokoyami's Furry Sandbox?</span><br/>
+				
+				<div class="loading">
+					<div class="rotat"><span class="spon">:$</span></div>
+	
+				</div><br/><br/>
+				<div class="monie">
+					
+				<div id="opA">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<table style="width: 100%;">
+					<tr><td><input class="c" type="hidden" name="on0" value="Supporter Level:">Supporter Level:</td></tr><tr><td><select name="os0">
+						<option value="Supporter">Supporter $5.00 USD</option>
+						<option value="SuperSupporter">SuperSupporter $10.00 USD</option>
+						<option value="AdvancedSupporter">AdvancedSupporter $15.00 USD</option>
+						<option value="MegaSupporter">MegaSupporter $30.00 USD</option>
+						<option value="UltraSupporter">UltraSupporter $45.00 USD</option>
+					</select> </td></tr>
+					<tr><td><input class="c" type="hidden" name="on1" value="Recipient's Steam Profile URL:">Recipient's Steam Profile URL:</td></tr><tr><td><input class="c" type="text" name="os1" maxlength="200"></td></tr>
+					<tr><td><input class="c" type="hidden" name="on2" value="Recipient's Discord Name#:">Recipient's Discord Name#:</td></tr><tr><td><input class="c" type="text" name="os2" maxlength="200"></td></tr>
+					</table>
+					<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form>
+					</div>
+					
+					<div id="opB">
+					<span class="blurb">Enter a custom amount on the next page.</span><hr>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<table style="width: 100%;">
+					<tr><td><input class="c" type="hidden" name="on0" value="Recipient's Steam Profile URL:">Recipient's Steam Profile URL:</td></tr><tr><td><input class="c" type="text" name="os0" maxlength="200"></td></tr>
+					<tr><td><input class="c" type="hidden" name="on1" value="Recipient's Discord Name#:">Recipient's Discord Name#:</td></tr><tr><td><input class="c" type="text" name="os1" maxlength="200"></td></tr>
+					</table>
+					<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form>
+</div>
+
+				<button onclick="myFunction()" id="thebutton" >OR Send a custom amount</button></br></br><hr>
+					<span class="blurb">PayPal supports all major cards.</span></br>
+					<span class="blurb">You get extra perks in game too!</span></br></br> 
+					<span class="blurb">It costs us about $40/month to run the server.</span></br>
+					<span class="blurb">You help keep it goiong! Thanks for playing.</span></br>
+					<span class="blurb">-phys</span></div><br/>
+				
+			</div>
+			<div class="foot">
+				<span class="border">A chill Garry's Mod server for chill furry people. - Join the Discord: <span id="discordid"></span></span>
+			</div>
+		</div>
+		<audio controls autoplay loop id="bleepbloops">
+			<source src="https://raw.githubusercontent.com/Physics-Dude/TFS/main/bgtheme.ogg" type="audio/ogg">
+		</audio>
+		<script>
+			var player = document.getElementById("bleepbloops");
+			player.volume = 0;
+			player.currentTime=Math.floor(Math.random() * 180);;
+			function fade(){
+				if(player.volume < 1){
+					var newVol = player.volume + 0.01
+					if (newVol>1){
+						newVol=1;
+					}
+					player.volume = newVol;
+				  setTimeout(fade, 100);
+				}
+			}
+			fade();
+
+			var discordInviteCote = "2sY8dgn";
+			document.getElementById("discordid").innerHTML = discordInviteCote;
+			
+		</script> 
+		<script>
+		function myFunction() {
+		   var divA = document.getElementById("opA");
+		   var divB = document.getElementById("opB");
+		   var butt = document.getElementById("thebutton");
+		   
+		  if (divA.style.display === "none") {
+			divA.style.display = "block";
+			divB.style.display = "none";
+			butt.innerHTML = "OR Send a custom amount";
+		  } 
+		  else {
+			divA.style.display = "none";
+			divB.style.display = "block";
+			butt.innerHTML = "OR Select from a list";
+		  }
+
+		}
+		myFunction();
+		</script>
+	</body>
+</html>
